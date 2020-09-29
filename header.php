@@ -17,7 +17,6 @@
         <li><a href="<?= site_url('/about'); ?>" <?php if (is_page('about')) echo 'class="active"' ?>>About</a></li>
         <li>
             <input type="text" placeholder="Search Here" />
-
         </li>
         </ul>
     </div>
@@ -31,12 +30,11 @@
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="<?= site_url(''); ?>" <?php if (is_front_page()) echo 'class="active"' ?>>Home</a></li>
+            <li><a href="<?= site_url(''); ?>" <?php if (is_front_page()) echo 'class="active"' ?>> Home </a></li>
             <li><a href="<?= site_url('/blog'); ?>"
                     <?php if (get_post_type() === 'post') echo 'class="active"' ?>>Blog</a></li>
             <li><a href="<?= site_url('/projects'); ?>"
-                    <?php if (get_post_type() === 'project') echo 'class="active"' ?>>Projects</a>
-            </li>
+                    <?php if (get_post_type() === 'project') echo 'class="active"' ?>>Projects</a></li>
             <li><a href="<?= site_url('/about'); ?>" <?php if (is_page('about')) echo 'class="active"' ?>>About</a></li>
             <li>
                 <div id="search-icon"><i class="fas fa-search"></i></div>
@@ -46,4 +44,8 @@
 
     <div id="searchbox">
         <input type="text" placeholder="Search Here" />
-    </div
+    </div>
+
+    <?php if (!is_front_page()) { ?>
+    <main>
+        <?php } ?>

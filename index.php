@@ -1,13 +1,11 @@
 <?php get_header(); ?>
 
-<main>
+
     <a href="<?= site_url('/blog'); ?>">
         <h2 class="page-heading">All Blogs</h2>
     </a>
     <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eligendi officiis. Suscipit, magni repellat.
-            Eius qui, et ad doloribus numquam nihil odit quia expedita, repellat, ratione delectus eveniet. Sint, quo?
-        </p>
+      
         <?php
 
         while (have_posts()) {
