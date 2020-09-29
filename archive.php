@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<main>
+
     <a href="<?= site_url('/blog'); ?>">
-        <h2 class="page-heading">All Projects</h2>
+        <h2 class="page-heading"><?php the_archive_title();  ?></h2>
     </a>
     <section>
 
@@ -23,8 +23,8 @@
                     <h3> <?php the_title(); ?></h3>
                 </a>
                 <div class="card-meta">
-                    Posted by <?php the_author(); ?> on <?php the_time('F J, Y') ?> in <a
-                        href="#"><?= get_the_category_list(', '); ?></a>
+                    Posted by <?php the_author(); ?> on <?php the_time('F J, Y') ?> 
+                  
                 </div>
                 <p>
                     <?= wp_trim_words(get_the_excerpt(), 30); ?>
