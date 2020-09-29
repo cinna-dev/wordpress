@@ -41,6 +41,7 @@ function gt_custom_post_type()
             ),
             'menu-icon' => 'dashicons-clipboard',
             'public' => true,
+            'has_archive' => true,
             'supports' => array(
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments'
             )

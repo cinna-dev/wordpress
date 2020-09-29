@@ -4,7 +4,10 @@
     <h1>&lt;GTCoding/&gt;</h1>
     <h3>Learn coding from scratch</h3>
 </div>
-
+<div id="banner">
+    <h1>&lt;GTCoding/&gt;</h1>
+    <h3>Learn coding from scratch</h3>
+</div>
 <main>
     <a href="<?= site_url('/blog'); ?>">
         <h2 class="section-heading">All Blogs</h2>
