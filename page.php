@@ -1,6 +1,6 @@
-<?php get_header(); 
+<?php get_header();
 
-while(have_posts()){
+while (have_posts()) {
     the_post();
 
 
@@ -10,29 +10,37 @@ while(have_posts()){
 
 <h2 class="page-heading"><?php the_title(); ?></h2>
 <div id="post-container">
-<section id="blogpost" >
+    <section id="blogpost">
         <div class="card">
-        <?php if(has_post_thumbnail()){
-        ?>
+            <?php if (has_post_thumbnail()) {
+                ?>
             <div class="card-image">
-               <img src="<?= get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Card Image">
+                <img src="<?= get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Card Image">
             </div>
-        <?php } ?>
+            <?php } ?>
             <div class="card-description">
-               <?php the_content(); ?>
+                <?php the_content(); ?>
             </div>
         </div>
 
-</section>
+    </section>
 
-<?php
+    <?php
 }
-?>
+    ?>
 
+    <aside id="sidebar">
+        <h3>Sidebar Heading</h3>
+        <p>Sidebar 1</p>
+    </aside>
+
+</div>
+
+</div>
+</section>
 <aside id="sidebar">
 <?php dynamic_sidebar('main_sidebar'); ?>
 </aside>
-
 </div>
 
 <?php get_footer(); ?>

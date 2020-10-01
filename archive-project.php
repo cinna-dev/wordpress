@@ -32,14 +32,28 @@
                 <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
             </div>
         </div>
+        <div class="card-description">
+            <a href="<?php the_permalink(); ?>">
+                <h3> <?php the_title(); ?></h3>
+            </a>
+            <div class="card-meta">
+                Posted by <?php the_author(); ?> on <?php the_time('F J, Y') ?>
 
-        <?php }
-        wp_reset_query();
-        ?>
-        <div class="pagination">
-            <?= paginate_links(); ?>
+            </div>
+            <p>
+                <?= wp_trim_words(get_the_excerpt(), 30); ?>
+            </p>
+            <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
         </div>
+    </div>
 
-    </section>
+    <?php }
+    wp_reset_query();
+    ?>
+    <div class="pagination">
+        <?= paginate_links(); ?>
+    </div>
 
-    <?php get_footer(); ?>p
+</section>
+
+<?php get_footer(); ?>p
