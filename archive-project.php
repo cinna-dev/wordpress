@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 
-    <a href="<?= site_url('/blog'); ?>">
+   
         <h2 class="page-heading"> All Projects</h2>
-    </a>
+ 
     <section>
 
         <?php

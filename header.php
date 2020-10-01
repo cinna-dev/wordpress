@@ -10,18 +10,19 @@
 
 <body>
     <div id="slideout-menu">
+        <ul>
         <li><a href="<?= site_url(''); ?>">Home</a></li>
         <li><a href="<?= site_url('/blog'); ?>">Blog</a></li>
         <li><a href="<?= site_url('/projects'); ?>">Projects</a></li>
         <li><a href="<?= site_url('/about'); ?>">About</a></li>
-        <li>
-            <input type="text" placeholder="Search Here" />
-        </li>
+       <div class="searchbox-slide-menu">
+           <?php get_search_form(); ?>
+       </div>
         </ul>
     </div>
     <nav>
         <div id="logo-img">
-            <a href="#">
+            <a href="<?= site_url(''); ?>">
                 <img src="<?= get_template_directory_uri();  ?>/img/logo.png" alt="GTCoding Logo" />
             </a>
         </div>  
@@ -40,9 +41,9 @@
     </nav>
  
     <div id="searchbox">
-        <input type="text" placeholder="Search Here" />
+       <?php get_search_form(); ?>
     </div>
-
+ 
     <?php if(!is_front_page()){ ?>
         <main>
     <?php } ?>
